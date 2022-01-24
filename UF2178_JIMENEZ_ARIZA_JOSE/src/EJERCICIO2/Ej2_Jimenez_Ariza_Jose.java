@@ -37,7 +37,12 @@ public class Ej2_Jimenez_Ariza_Jose {
 		System.out.println("Introduzca el numero de paciente cuya media quiera calcular:");
 		paciente = entrada.nextInt();
 		
-		System.out.println("La media del paciente es: " + examen.media_paciente(imcs_pacientes, paciente));
+		if(paciente>=0 && paciente<imcs_pacientes.length) {
+			System.out.println("La media del paciente es: " + examen.media_paciente(imcs_pacientes, paciente));
+		} else {
+			System.out.println("ERROR, el paciente que has introducido no existe");
+		}
+		
 		
 		entrada.close();
 
